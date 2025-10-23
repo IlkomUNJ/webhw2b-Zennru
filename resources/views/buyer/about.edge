@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ asset('/css/about.css') }}">   
+    <title>{{ title || 'Buyer About | RUZÉ Co.' }}</title>
+</head>
+<body>
+    @include('partials/nav')
+    
+    <section class="about" id="about">
+        <h1 class="heading"><span> About </span> Us </h1>
+        <div class="row">
+        <div class="video-container">
+            <video src="/img/video_about.mp4" loop autoplay muted></video>
+        </div>
+
+        <div class="content">
+            <h3>Why Choose Us?</h3>
+            <p>
+            At RUZÉ Co., we are dedicated to providing eco-friendly products that not only enhance your lifestyle but also contribute to a sustainable future. 
+            Our mission is to offer high-quality, stylish, and environmentally conscious alternatives that make a positive impact on the planet.
+            </p>
+            <p>
+            We believe in transparency, ethical sourcing, and supporting communities. By choosing RUZÉ Co., you are making a conscious choice to support a brand that values sustainability and social responsibility.
+            </p>
+            <a href="/buyer/products" class="btn">our products</a>
+        </div>
+        </div>
+    </section>
+
+    @include('partials/footer')
+
+</body>
+</html>

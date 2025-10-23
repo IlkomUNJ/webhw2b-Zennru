@@ -1,0 +1,150 @@
+body {
+    padding-top: 85px; 
+    }
+
+.checkout-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    }
+
+.left-products {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+
+.product-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+.product-card input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    }
+
+.product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    }
+
+.product-details button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.product-details button:hover {
+    background: #3ca865;
+    }
+
+.product-details h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    }
+
+.product-details p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #555;
+    }
+
+.right-card {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-height: 300px;
+    display: flex;              
+    flex-direction: column;     
+    justify-content: space-between;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    flex: 1;
+}
+
+.right-section h4 {
+    font-size: 18px;
+    }
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end;  
+}
+
+.checkout-btn {
+    padding: 20px 150px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #50C878;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #3ca865;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.add-btn, .remove-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-add {
+    background: #50C878;
+    color: #fff;
+}
+.btn-add:hover {
+    background: #3ca865;
+}
+
+.btn-remove {
+    background: #FF4C4C;
+    color: #fff;
+}
+.btn-remove:hover {
+    background: #c0392b ;
+}
+
+
+
+
+

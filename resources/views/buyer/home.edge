@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ asset('/css/about.css') }}">   
+    <title>{{ title || 'Buyer Home | RUZÉ Co.' }}</title>
+</head>
+<body>
+    @include('partials/nav')
+    
+    <section class="home" id="home">
+    <div class="content">
+      <h3>Discover RUZÉ</h3>
+      <span>Sustainable Living, Stylish Choices</span>
+      <p>Temukan koleksi produk ramah lingkungan kami yang dirancang untuk gaya hidup modern dan berkelanjutan</p>
+      <a href="/buyer/products" class="btn">Shop now</a>
+    </div>
+  </section>
+
+  @include('partials/footer')
+
+</body>
+</html>

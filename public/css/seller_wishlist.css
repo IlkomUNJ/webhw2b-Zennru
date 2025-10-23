@@ -1,0 +1,96 @@
+body {
+  background: #f7f7f7;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+  background: #e8f5ee;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  color: #50C878;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  padding: 0 5%;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card .info h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.card .info p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.card .info .buyer {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #50C878;
+  font-weight: bold;
+}
+
+.active-heart {
+  color: #ff4d6d !important;
+}
+
+.remove-form {
+  margin-top: 1rem;
+}
+
+.remove-btn {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: #e63950;
+  transform: scale(1.05);
+}

@@ -1,0 +1,23 @@
+@layout.app({ title: 'Contact Page | RUZÉ Co.' })
+
+@slot('main')
+  <section class="contact" id="contact">
+    <h1 class="heading"><span> Contact </span> Us </h1>
+
+    <div class="row">
+      <form action="">
+        <input type="text" placeholder="Your Name" class="box" />
+        <input type="email" placeholder="Your Email" class="box" />
+        <input type="number" placeholder="Your Number" class="box" />
+        <textarea class="box" placeholder="Your Message" cols="30" rows="10"></textarea>
+        <input type="submit" value="Send Message" class="btn" />
+      </form>
+
+      <div class="image">
+        <img src="/img/bg-contact.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+@endslot
+
+@end

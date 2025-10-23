@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Page | RUZÉ Co.</title>
+  <link rel="stylesheet" href="/css/registrasi.css" />
+  <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div id="scene">
+        <div class="layer"><img src="/img/registrasi.jpg" /></div>
+      </div>
+    </div>
+
+    <form action="/registrasi" method="POST" class="register-form">
+      @csrf
+      <div class="login">
+        <h2>Register</h2>
+
+        <div class="inputbox">
+          <label for="username">Username :</label>
+          <input type="text" name="username" id="username" placeholder="Masukkan username..." required />
+        </div>
+
+        <div class="inputbox">
+          <label for="email">Email :</label>
+          <input type="email" name="email" id="email" placeholder="Masukkan email..." required />
+        </div>
+
+        <div class="inputbox">
+          <label for="password">Password :</label>
+          <input type="password" name="password" id="password" placeholder="Password..." required />
+        </div>
+
+        <div class="inputbox">
+          <label for="password2">Konfirmasi Password :</label>
+          <input type="password" name="password2" id="password2" placeholder="Konfirmasi Password..." required />
+        </div>
+
+        <div class="inputbox">
+          <label for="role">Pilih Role :</label>
+          <select name="role" id="role" required>
+            <option value="user">User</option>
+            <option value="seller">Seller</option>
+          </select>
+        </div>
+
+        <div class="inputbox">
+          <button type="submit" id="btn">Registrasi</button>
+        </div>
+
+        <div class="group">
+          <p>Sudah punya akun? <a href="/login">Login</a></p>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
+</html>

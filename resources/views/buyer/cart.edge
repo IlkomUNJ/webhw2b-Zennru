@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title || 'Buyer Cart | RUZÉ Co.' }}</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/buyer_cart.css">
+    </head>
+
+    <body>
+    @include('partials/nav')
+
+    <section class="cart-page">
+        <div class="cart-container">
+        <div class="cart-left">
+            <h2>Keranjang</h2>
+
+            @if(cart.length === 0)
+            <p class="empty-cart">Keranjang kamu kosong </p>
+            @else
+            <div class="cart-select-all">
+                <input type="checkbox" id="select-all">
+                <label for="select-all">Pilih Semua ({{ cart.length }})</label>
+            </div>
+
+            @each(item in cart)
+                <div class="cart-item">
+                <input type="checkbox" class="item-check">
+
+                <img src="{{ item.product.image }}" alt="{{ item.product.title }}" class="item-image">
+
+                <div class="item-details">
+                    <h3>{{ item.product.title }}</h3>
+                    <p>Seller: {{ item.sellerEmail }}</p>
+                </div>
+
+                <div class="item-price">
+                    <p>Rp {{ item.product.price }}</p>
+                </div>
+
+                <div class="item-actions">
+                    <form action="/buyer/remove-cart" method="POST" style="display:inline;">
+                    <input type="hidden" name="productId" value="{{ item.productId }}">
+                    <button type="submit" class="delete-btn"><i class="fas fa-trash"></i></button>
+                    </form>
+                    <div class="qty-box">
+                    <button class="qty-btn">-</button>
+                    <span>1</span>
+                    <button class="qty-btn">+</button>
+                    </div>
+                </div>
+                </div>
+            @endeach
+            @endif
+        </div>
+
+        <div class="cart-summary">
+            <h3>Ringkasan Belanja</h3>
+            <div class="summary-box">
+            <p>Total</p>
+            <h2>Rp {{ cart.reduce((sum, c) => sum + Number(c.product.price || 0), 0) }}</h2>
+            </div>
+
+            <button class="checkout-btn">Beli</button>
+        </div>
+        </div>
+    </section>
+
+    @include('partials/footer')
+</body>
+</html>

@@ -1,0 +1,204 @@
+@layout.app({ title: 'Products Page | RUZÉ Co.' })
+
+@slot('main')
+  <section class="products" id="products">
+    <h1 class="heading"><span> Our </span> Products <span> Collection </span></h1>
+
+    <section class="search-bar">
+      <form action="">
+        <input type="text" placeholder="Cari produk..." id="search-box" />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <div class="box-container">
+      <div class="box">
+        <span class="discount">-18%</span>
+        <div class="image">
+          <img src="/img/product-1.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Black T-Shirt</h3>
+          <div class="price">Rp 350.000 <span>Rp 400.000</span></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="/img/product-2.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Simple Outfit</h3>
+          <div class="price">Rp 250.000</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="/img/product-3.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Brown T-Shirt</h3>
+          <div class="price">Rp 200.000</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="/img/product-4.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Simple Outfit</h3>
+          <div class="price">Rp 250.000</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="/img/product-5.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Simple Outfit</h3>
+          <div class="price">Rp 250.000</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="/img/product-6.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Simple Outfit</h3>
+          <div class="price">Rp 250.000</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="/img/product-7.jpg" alt="" />
+          <div class="icons">
+            <a href="/wishlist" class="fas fa-heart"></a>
+            <a href="/checkout" class="cart-btn">ADD TO CART</a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Simple Outfit</h3>
+          <div class="price">Rp 250.000</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="discount">-18%</span>
+        <div class="image">
+          <img src="/img/product-8.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Tote Bag Canvas</h3>
+          <div class="price">Rp 50.000 <span>Rp 100.000</span></div>
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="discount">-18%</span>
+        <div class="image">
+          <img src="/img/product-9.jpg" alt="" />
+          <div class="icons">
+            @if(!user)
+              <a href="/login" class="fas fa-heart"></a>
+              <a href="/login" class="cart-btn">ADD TO CART</a>
+              <a href="/login" class="fas fa-eye"></a>
+            @else
+              <a href="/wishlist" class="fas fa-heart"></a>
+              <a href="/checkout" class="cart-btn">ADD TO CART</a>
+              <a href="#" class="fas fa-eye"></a>
+            @endif
+          </div>
+        </div>
+        <div class="content">
+          <h3>Tote Bag Canvas</h3>
+          <div class="price">Rp 50.000 <span>Rp 100.000</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+@endslot
+
+@end

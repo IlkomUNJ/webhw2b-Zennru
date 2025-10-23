@@ -1,0 +1,19 @@
+{
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./build",
+    "baseUrl": ".",
+    "paths": {
+      "#start/*": ["./start/*"],
+      "#controllers/*": ["./app/controllers/http/*"],
+      "#models/*": ["./app/models/*"],
+      "#middleware/*": ["./app/middleware/*"],
+      "#exceptions/*": ["./app/exceptions/*"],
+      "#validators/*": ["./app/validators/*"],
+      "#views/*": ["./resources/views/*"],
+      "#config/*": ["./config/*"]
+    }
+  },
+  "include": ["app", "start", "config", "database", "commands", "bin", "contracts"]
+}

@@ -1,0 +1,151 @@
+body {
+  padding-top: 75px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2C3930;
+  background: #e8f5ee;
+  margin: 3rem 0 1rem 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.heading span {
+  color: #50C878;
+}
+
+.add-product {
+  text-align: center;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 1.2rem;
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.add-product:hover {
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.add-product form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.add-product input {
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  border: 2px solid #dcdcdc;
+  border-radius: 0.7rem;
+  outline: none;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.add-product input:focus {
+  border-color: #50C878;
+  box-shadow: 0 0 0.2rem #50C878;
+}
+
+.add-product button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2C3930, #444);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-product button:hover {
+  background: #50C878;
+  transform: scale(1.05);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.products {
+  padding: 2rem 5%;
+}
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+}
+
+.products .box {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0,0,0,.15);
+}
+
+.products .image {
+  position: relative;
+}
+
+.products .image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.products .content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.products .content h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.products .price {
+  font-size: 1.7rem;
+  color: #50C878;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.products .content p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #dc3545, #b52b27);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #b52b27, #902020);
+  transform: scale(1.05);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+}

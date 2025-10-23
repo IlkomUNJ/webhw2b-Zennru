@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title || 'RUZÉ Co.' }}</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/about.css" />
+  <link rel="stylesheet" href="/css/product.css" />
+  <link rel="stylesheet" href="/css/seller_products.css" />
+  <link rel="stylesheet" href="/css/seller_wishlist.css" />
+  <link rel="stylesheet" href="/css/buyer/cart.css" />
+</head>
+
+<body>
+  <!-- HEADER dinamis -->
+  <header>
+    <input type="checkbox" id="menu-bar" />
+    <label for="menu-bar" class="fa fa-bars"></label>
+
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="Logo" />
+    </a>
+
+    <nav class="navbar">
+      {{-- Belum login --}}
+      @if(!user)
+        <a href="/" class="{{ request.url() === '/' ? 'active' : '' }}">HOME</a>
+        <a href="/about" class="{{ request.url().startsWith('/about') ? 'active' : '' }}">ABOUT</a>
+        <a href="/products" class="{{ request.url().startsWith('/products') ? 'active' : '' }}">PRODUCTS</a>
+        <a href="/contact" class="{{ request.url().startsWith('/contact') ? 'active' : '' }}">CONTACT</a>
+
+      {{-- Buyer login --}}
+      @elseif(user.role === 'buyer')
+        <a href="/buyer/home" class="{{ request.url().startsWith('/buyer/home') ? 'active' : '' }}">HOME</a>
+        <a href="/buyer/about" class="{{ request.url().startsWith('/buyer/about') ? 'active' : '' }}">ABOUT</a>
+        <a href="/buyer/products" class="{{ request.url().startsWith('/buyer/products') ? 'active' : '' }}">PRODUCTS</a>
+
+      {{-- Seller login --}}
+      @elseif(user.role === 'seller')
+        <a href="/seller/home" class="{{ request.url().startsWith('/seller/home') ? 'active' : '' }}">HOME</a>
+        <a href="/seller/about" class="{{ request.url().startsWith('/seller/about') ? 'active' : '' }}">ABOUT</a>
+        <a href="/seller/wishlist" class="{{ request.url().startsWith('/seller/wishlist') ? 'active' : '' }}">WISHLIST</a>
+        <a href="/seller/products" class="{{ request.url().startsWith('/seller/products') ? 'active' : '' }}">PRODUCTS</a>
+      @endif
+    </nav>
+
+    <div class="icons">
+      {{-- Wishlist & Cart --}}
+      @if(user && user.role === 'buyer')
+    <div class="icon-wrapper">
+      <a href="/buyer/wishlist" class="fas fa-heart {{ request.url().startsWith('/buyer/wishlist') ? 'active-icon' : '' }}"></a>
+      @if(wishlistCount && wishlistCount > 0)
+        <span class="notif-badge">{{ wishlistCount }}</span>
+      @endif
+    </div>
+
+    <div class="icon-wrapper">
+      <a href="/cart" class="fas fa-shopping-cart {{ request.url().startsWith('/buyer/cart') ? 'active-icon' : '' }}"></a>
+      @if(cartCount && cartCount > 0)
+        <span class="notif-badge">{{ cartCount }}</span>
+      @endif
+    </div>
+  @elseif(!user)
+    <a href="/login" class="fas fa-heart"></a>
+    <a href="/login" class="fas fa-shopping-cart"></a>
+  @endif
+
+      @if(user)
+        <a href="/logout" class="fas fa-sign-out-alt" title="Logout"></a>
+      @else
+        <a href="/login" class="fas fa-user {{ request.url().startsWith('/login') ? 'active-icon' : '' }}" title="Login"></a>
+      @endif
+    </div>
+  </header>
+</body>
+</html>

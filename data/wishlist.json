@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "productId": 2,
+    "buyerEmail": "buyer@example.com",
+    "sellerEmail": "seller@example.com",
+    "createdAt": "2025-10-23T21:19:29.050Z"
+  }
+]

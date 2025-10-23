@@ -1,0 +1,138 @@
+@layout.app({ title: 'Home Page | RUZÉ Co.' })
+
+@slot('main')
+  <section class="home" id="home">
+    <div class="content">
+      <h3>Discover RUZÉ</h3>
+      <span>Sustainable Living, Stylish Choices</span>
+      <p>Temukan koleksi produk ramah lingkungan kami yang dirancang untuk gaya hidup modern dan berkelanjutan</p>
+      <a href="/products" class="btn">shop now</a>
+    </div>
+  </section>
+
+<section class="product-showcase">
+  <h1 class="heading"><span> Our </span> Featured <span> Collections </span></h1>
+  <div class="grid">
+    <div class="main-card">
+      <h2>MONTHLY PRODUCTS</h2>
+      <div class="sub-cards">
+        <div class="card">
+          <img src="/img/g-so.jpg" alt="Product 1" />
+          <h3>Simple Outfit</h3>
+          <p>Outfit Wanita simple dan trendy</p>
+          <a href="/products" class="btn">View</a>
+        </div>
+        <div class="card">
+          <img src="/img/b-so.jpg" alt="Product 2" />
+          <h3>Simple Outfit</h3>
+          <p>Outfit Pria simple dan trendy</p>
+          <a href="/products" class="btn">View</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-card">
+      <h2>BEST SELLER</h2>
+      <div class="sub-cards">
+        <div class="card">
+          <img src="/img/g-ks.jpg" alt="Product 3" />
+          <h3>Korean Style</h3>
+          <p>Outfit Wanita Korea trendy</p>
+          <a href="/products" class="btn">View</a>
+        </div>
+        <div class="card">
+          <img src="/img/t-bag.jpg" alt="Product 4" />
+          <h3>Canvas Tote Bag</h3>
+          <p>Tote Bag Canvas anti air</p>
+          <a href="/products" class="btn">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="icons-container">
+  <h2 class="icons-title">Why Choose RUZÉ ?</h2>
+  <div class="icons">
+    <img src="/img/leaf.png" alt="" />
+    <div class="info">
+      <h3>Eco-Friendly Materials</h3>
+      <span>100% natural materials</span>
+    </div>
+  </div>
+  <div class="icons">
+    <img src="/img/truk.png" alt="" />
+    <div class="info">
+      <h3>Fast & Secure Shipping</h3>
+      <span>Free shipping worldwide</span>
+    </div>
+  </div>
+  <div class="icons">
+    <img src="/img/protect.png" alt="" />
+    <div class="info">
+      <h3>24/7 Support & Trusted Quality</h3>
+      <span>Customer satisfaction guaranteed</span>
+    </div>
+  </div>
+  <div class="icons">
+    <img src="/img/card.png" alt="" />
+    <div class="info">
+      <h3>Easy Payment</h3>
+      <span>Multiple payment options</span>
+    </div>
+  </div>
+</section>
+
+<section class="review" id="review">
+  <h1 class="heading">Customer's <span>Review</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <div class="stars">
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      </div>
+      <p>"Produk yang saya beli dari RUZÉ Co. sangat berkualitas dan ramah lingkungan. Saya merasa bangga bisa berkontribusi pada pelestarian lingkungan dengan menggunakan produk mereka."</p>
+      <div class="user">
+        <img src="/img/profile-1.jpg" alt="" />
+        <div class="user-info">
+          <h3>Jason</h3>
+          <span>Customer</span>
+        </div>
+      </div>
+      <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+      <div class="stars">
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      </div>
+      <p>"Produk yang saya beli dari RUZÉ Co. sangat berkualitas dan ramah lingkungan. Saya merasa bangga bisa berkontribusi pada pelestarian lingkungan dengan menggunakan produk mereka."</p>
+      <div class="user">
+        <img src="/img/profile-2.jpg" alt="" />
+        <div class="user-info">
+          <h3>Stephany</h3>
+          <span>Customer</span>
+        </div>
+      </div>
+      <span class="fas fa-quote-right"></span>
+    </div>
+
+    <div class="box">
+      <div class="stars">
+        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      </div>
+      <p>"Produk yang saya beli dari RUZÉ Co. sangat berkualitas dan ramah lingkungan. Saya merasa bangga bisa berkontribusi pada pelestarian lingkungan dengan menggunakan produk mereka."</p>
+      <div class="user">
+        <img src="/img/profile-3.jpeg" alt="" />
+        <div class="user-info">
+          <h3>Tanboy</h3>
+          <span>Customer</span>
+        </div>
+      </div>
+      <span class="fas fa-quote-right"></span>
+    </div>
+  </div>
+</section>
+
+@endslot
+
+@end

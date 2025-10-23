@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page | RUZÉ Co.</title>
+  <link rel="stylesheet" href="/css/login.css" />
+  <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+</head>
+<body>
+  <section>
+    <img src="/img/login.jpg" class="bg" />
+
+    <form method="POST" action="/login" class="login-form">
+      @csrf
+      <div class="login">
+        <h2>Log In</h2>
+
+        <div class="inputbox">
+          <label for="email">EMAIL :</label>
+          <input type="email" name="email" id="email" placeholder="Email..." required />
+        </div>
+
+        <div class="inputbox">
+          <label for="password">PASSWORD :</label>
+          <input type="password" name="password" id="password" placeholder="Password..." required />
+        </div>
+
+        <div class="inputbox">
+          <button type="submit" id="btn">LOGIN</button>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ asset('/css/seller_wishlist.css') }}">   
+    <title>{{ title || 'Seller Wishlist | RUZÉ Co.' }}</title>
+</head>
+<body>
+        @include('partials/nav')
+
+    <section class="wishlist-container" style="margin-top:120px;">
+        <h1 class="heading"><span>Wishlist</span> Produkmu</h1>
+
+        @if(wishlist.length === 0)
+        <p class="empty">Produk kamu belum disukai oleh siapapun </p>
+        @else
+        <div class="wishlist-grid">
+            @each(item in wishlist)
+            <div class="card">
+                <img src="{{ item.product.image }}" alt="{{ item.product.title }}">
+                <div class="info">
+                <h3>{{ item.product.title }}</h3>
+                <p>Rp {{ item.product.price }}</p>
+                <p class="buyer">Disukai oleh: <b>{{ item.buyerEmail }}</b></p>
+                </div>
+            </div>
+            @endeach
+        </div>
+        @endif
+    </section>
+
+    @include('partials/footer')
+
+</body>
+</html>

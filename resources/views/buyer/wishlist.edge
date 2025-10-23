@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Wishlist | RUZÉ Co.</title>
+  <link rel="stylesheet" href="/css/seller_wishlist.css" />
+</head>
+<body>
+  @include('partials/nav')
+
+  <section class="wishlist-container" style="margin-top:120px;">
+    <h1 class="heading"><span>My</span> Wishlist</h1>
+
+    @if(wishlist.length === 0)
+      <p class="empty">Kamu belum menambahkan produk apapun ke wishlist </p>
+    @else
+      <div class="wishlist-grid">
+        @each(item in wishlist)
+          <div class="card">
+            <img src="{{ item.product.image }}" alt="{{ item.product.title }}">
+            <div class="info">
+              <h3>{{ item.product.title }}</h3>
+              <p>Rp {{ item.product.price }}</p>
+              <form action="/buyer/remove-wishlist" method="POST" class="remove-form">
+                <input type="hidden" name="productId" value="{{ item.product.id }}">
+                <button type="submit" class="remove-btn">Hapus</button>
+              </form>
+            </div>
+          </div>
+        @endeach
+      </div>
+    @endif
+  </section>
+
+  @include('partials/footer')
+</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+  padding-top: 80px; 
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem; 
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.contact .row .image{
+    flex: 1 1 40rem;
+    display: flex;
+}
+
+.contact .row .image img{
+    width: 100%;
+    height: 100%;      
+    border-radius: .5rem;
+    object-fit: cover; 
+}
+
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.contact .row form .box:focus{
+    border-color: #50C878;
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 4rem;
+    color: #333;
+    margin: 2rem 0;
+    background: #DCDCDC;
+}
+
+.heading span{
+    color: #2C3930;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: #50C878;
+}
